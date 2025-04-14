@@ -70,14 +70,23 @@ printf("Invalid choice try again.\n");
 }
 
 void advanced_administration_activities(){
-do{
+while(1){
 int choice;
 printf("\n Welcome for advanced administration activities proceed if you are permitted.\n");
 printf("Enter the choice of what you wnna do\n");
 printf("1. Culclate non governmental teacher\'s salary before payment\n");
 printf("2. Delete a member of a high rank in the staff\n");
 printf("3. Exit the program\n");
-}while(choice != 3)
+scanf("%d", &choice);
+switch(choice){
+case 3:
+exit(0);
+break;
+default:
+printf("You have entered an invalid choice try again.\n");
+break;
+}
+}
 }
 int main(){
 int choice;
