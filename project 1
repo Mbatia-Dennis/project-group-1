@@ -1,6 +1,117 @@
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
 
+void library_activities(){
+int choice;
+do{
+printf("\n Welcome to library services enter your choice depending on the displays below.\n");
+printf("1. Add a book in the library.\n");
+printf("2. search for a book in the library.\n");
+printf("3. Pay for library charges.\n");
+printf("4. Return a book in the library.\n");
+printf("5. Display available books in the library.\n");
+printf("6. Add a library user.\n");
+printf("7. Borrow a book.\n");
+printf("8. Search for a library user.\n");
+printf("9. Exit the program.\n");
+scanf("%d", &choice);
+switch(choice){
+case 9:
+exit(0);
+break;
+default:
+printf("Invalid choice try again.\n");
+break;
+}
+}while(choice != 9);
+}
+
+void student_activities(){
+int choice;
+while(1){
+printf("\n Welcome to student services enter choice according to the following display.\n");
+printf("1. Add a student to the system.\n");
+printf("2. Remove a student to the system.\n");
+printf("3. Dispay student\'s details if already in yhe system.\n");
+printf("4. Display students in the system.\n");
+printf("5. Check for student\'s qualifications.\n");
+printf("6 Exit the program.\n");
+scanf("%d", &choice);
+switch(choice){
+case 6: 
+exit(0);
+break;
+default:
+printf("Invalid choice please try again.\n");
+}
+}
+}
+
+void teachers_activities(){
+while(1){
+int choice;
+printf("\n Welcome to teachers services proceed according to the options below.\n");
+printf("1. Add a new teacher int the system.\n");
+printf("2. See teacher\'s details if already on the system.\n");
+printf("3. Remove a teacher from the system.\n");
+printf("4. Display all teachers details.\n");
+printf("5. Exit the program.\n");
+scanf("%d", &choice);
+switch(choice){
+case 5:
+exit(0);
+break;
+deefault:
+printf("Invalid choice try again.\n");
+}
+}
+}
+
+void advanced_administration_activities(){
+do{
+int choice;
+printf("\n Welcome for advanced administration activities proceed if you are permitted.\n");
+printf("Enter the choice of what you wnna do\n");
+printf("1. Culclate non governmental teacher\'s salary before payment\n");
+printf("2. Delete a member of a high rank in the staff\n");
+printf("3. Exit the program\n");
+}while(choice != 3)
+}
 int main(){
+int choice;
+while(1){
+printf("\nWelcome to school adminstration activities enter your choice depending on what you want to do.\n");
+printf("1. Visit student activities.\n");
+printf("2. Visit teacher\'s activities.\n");
+printf("3. Visit library activities.\n");
+printf("4. Visit advanced adminstration activities.\n");
+printf("1. Exit the program.\n");
+scanf("%d", &choice);
+switch(choice){
+case 1:
+ student_activities();
+ break;
+case 2:
+ teachers_activities();
+ break;
+case 3:
+library_activities();
+break;
+case 4:
+ advanced_administration_activities;
+ break;
+case 5:
+exit(0);
+printf("1. Visit student activities.\n");//to terminate process normally
+break;
+default:{
+printf("You have entered an invalid choice try again.\n");//to handle wrong choices
+}
+break;
+}
+}
     printf("projoo\n"); 
     return 0;
 }
